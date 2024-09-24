@@ -112,6 +112,7 @@ def isValidPassword(password):
         return False
     elif password2.isdigit():
         print("The string contains only digits. Please enter another character")
+        return False
     else:
         print("Your password is ok")
         return True
