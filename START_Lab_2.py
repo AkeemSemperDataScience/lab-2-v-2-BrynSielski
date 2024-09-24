@@ -39,12 +39,13 @@ def lab2Question3(str1, str2):
     # Return the number of times str2 appears in str1
     # For example if str1 = "coding is cool" and str2 = "co" then output should be 2.
 
-    def howManyTimes(str1, str2):
+    def howManyTimes(long, short):
         str1Short = len(str2) #defines a short string as 
         counter = 0 #counter to progress through string1
         timesFound = 0 #counter for end count
+
         for letter in str1:
-            if str1[counter:str1Short] == str2: #if string1[pieces from counter # to short #]
+            if str1.lower()[counter:str1Short] == str2.lower(): #if string1[pieces from counter # to short #]
                 timesFound = timesFound + 1 #increase counter if found
             counter = counter + 1
             str1Short = str1Short + 1
@@ -109,8 +110,10 @@ def isValidPassword(password):
     elif passwordNum is False: #find out if string contains any numbers
         print("Password does not contain a number")
         return False
+    elif password2.isdigit():
+        print("The string contains only digits. Please enter another character")
     else:
-#        print("Your password is ok")
+        print("Your password is ok")
         return True
     
     pass
@@ -120,7 +123,7 @@ def isValidPassword(password):
 
 #print(lab2Question1("girafarig"))
 #print(lab2Question2(59))
-#print(lab2Question3("kitty cat", "cat"))
+#print(lab2Question3("Superstitious and superfluous", "super"))
 
-#isValidPassword("AAAAAAAb1")
+isValidPassword("12345678")
 #lab2Question5("AAAAAAAb1")
