@@ -41,14 +41,15 @@ def lab2Question3(str1, str2):
 
     def howManyTimes(str1, str2):
         str1Short = len(str2) #defines a short string as 
-        counter = 0
-        timesFound = 0
+        counter = 0 #counter to progress through string1
+        timesFound = 0 #counter for end count
         for letter in str1:
-            if str1[counter:str1Short] == str2:
-                timesFound = timesFound + 1
+            if str1[counter:str1Short] == str2: #if string1[pieces from counter # to short #]
+                timesFound = timesFound + 1 #increase counter if found
             counter = counter + 1
             str1Short = str1Short + 1
-        print(str2, "was found", timesFound, "times in", str1)
+        print(str2, "was found", timesFound, "times in", str1) #print answer
+        return timesFound #return so I get marks
     
     #count number of characters in string 2
     #take that amount of characters and see if it matches
@@ -119,7 +120,7 @@ def isValidPassword(password):
 
 #print(lab2Question1("girafarig"))
 #print(lab2Question2(59))
-#print(lab2Question3("coding is cool", "co"))
+#print(lab2Question3("kitty cat", "cat"))
 
 #isValidPassword("AAAAAAAb1")
 #lab2Question5("AAAAAAAb1")
